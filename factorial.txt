@@ -1,0 +1,37 @@
+Data
+Result
+           LXI H, 2000H
+           MOV B, M
+           MVI D, 01H
+FACTORIAL  CALL MULTIPLY
+           DCR B
+           JNZ FACTORIAL     
+           INX H
+           MOV M, D
+           HLT
+MULTIPLY   MOV E, B
+           MVI A, 00H
+MULTIPLYLOOP	
+           ADD D
+           DCR E
+           JNZ MULTIPLYLOOP
+           MOV D, A
+           RET
+
+
+LXI H, 8000H
+MOV B,M
+MVI D, 01H
+CALL MUL
+DCR B
+JNZ FACT
+INX H
+MOV M,D
+HLT
+MOV E,B
+XRA A
+ADD D
+DCR E
+JNZ ML
+MOV D,A
+RET

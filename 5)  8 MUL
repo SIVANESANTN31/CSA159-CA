@@ -1,0 +1,10 @@
+LDA 2001
+MOV B,A
+LDA 2002
+MOV C,A
+MVI A,00h
+LOOP: ADD B
+      DCR C 
+      JNZ LOOP
+      STA 2003
+      HLT

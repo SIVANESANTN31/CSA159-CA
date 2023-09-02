@@ -1,0 +1,14 @@
+LDA 2001
+MOV B,A
+LDA 2000
+MVI C,00
+SUB B 
+LOOP1: CMP B
+       JC LOOP2
+       SUB B 
+       INR C 
+       JMP LOOP1
+LOOP2: STA 2003
+       MOV A ,C
+       STA 2004
+       HLT

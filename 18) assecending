@@ -1,0 +1,19 @@
+lxi h,4200
+mov c,m
+dcr c
+l3: mov d,c 
+lxi h,4201
+l2: mov a,m 
+inx h
+cmp m
+jc l1
+mov b,m
+mov m,a
+dcx h
+mov m,b
+inx h
+l1: dcr d
+jnz l2
+dcr c
+jnz l3
+hlt

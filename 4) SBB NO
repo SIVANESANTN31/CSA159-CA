@@ -1,0 +1,11 @@
+lda 3050
+mov b,a
+lda 3051
+SUB b
+sta 3052
+lda 3053
+mov b,a
+lda 3054
+SBB b 
+sta 3055
+hlt
